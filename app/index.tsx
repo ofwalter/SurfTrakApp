@@ -27,10 +27,12 @@ const TopBar = () => {
   return (
     <BlurView intensity={80} tint="light" className="border-b border-gray-200/50">
       <View style={{ paddingTop: insets.top }} className="flex-row items-center justify-between px-5 py-4">
-        <Image
-          source={profilePlaceholder}
-          className="w-14 h-14 rounded-full"
-        />
+        <View className="w-14 h-14 justify-center items-center">
+          <Image
+            source={profilePlaceholder}
+            className="w-14 h-14 rounded-full"
+          />
+        </View>
         <Image 
           source={logoImage} 
           className="h-12 w-40"

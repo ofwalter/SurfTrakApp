@@ -174,9 +174,9 @@ const SessionsHeader = () => {
   return (
     <BlurView intensity={80} tint="light" className="border-b border-gray-200/50">
       <View style={{ paddingTop: insets.top }} className="flex-row items-center justify-between px-5 py-4">
-        <View className="relative">
-          <Animated.View style={buttonStyle}>
-            <TouchableOpacity className="w-14 h-14 rounded-full overflow-hidden items-center justify-center">
+        <View className="w-14 h-14 justify-center items-center">
+          <Animated.View style={buttonStyle} className="w-12 h-12 justify-center items-center">
+            <TouchableOpacity className="w-12 h-12 rounded-full overflow-hidden items-center justify-center">
               <AnimatedLinearGradient
                 animatedProps={animatedGradientProps}
                 colors={['#1A73E8', '#4AB1FF']}
@@ -184,17 +184,15 @@ const SessionsHeader = () => {
                 end={{ x: 1, y: 1 }}
                 className="absolute top-0 left-0 right-0 bottom-0"
               />
-              <Ionicons name="add" size={32} color="#fff" />
+              <Ionicons name="add" size={28} color="#fff" />
             </TouchableOpacity>
           </Animated.View>
           <Animated.View 
             style={[pulseStyle, {
               position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              borderRadius: 28,
+              width: 48,
+              height: 48,
+              borderRadius: 24,
               backgroundColor: '#1A73E8',
               zIndex: -1,
             }]}
